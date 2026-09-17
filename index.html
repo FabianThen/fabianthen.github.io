@@ -106,8 +106,8 @@
   .hero > *:not(.hero-bg) { position: relative; z-index: 2; }
   .hero-portrait {
     width: 190px;
-    height: 190px;
-    border-radius: 50%;
+    height: 253px;
+    border-radius: 20px;
     overflow: hidden;
     margin-bottom: 2.2rem;
     border: 2px solid rgba(56,189,248,0.5);
@@ -247,8 +247,8 @@
   }
   .mission-photo {
     position: relative;
-    aspect-ratio: 1;
-    border-radius: 50%;
+    aspect-ratio: 3 / 4;
+    border-radius: 20px;
     overflow: hidden;
     max-width: 380px;
     margin: 0 auto;
@@ -403,7 +403,7 @@
 <header class="hero" id="top">
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-portrait">
-    <img src="profile.jpeg" alt="Fabian Then" width="380" height="380">
+    <img src="profile.jpeg" alt="Fabian Then" width="380" height="507">
   </div>
   <h1>Welcome to my world</h1>
   <div class="subtitle">Where technology lives</div>
@@ -426,16 +426,16 @@
       <div class="mission-body">
         <div class="eyebrow">Professional Mission Statement</div>
         <h2 class="section-title">Allow me to show you what I can do.</h2>
-        <p>I'm a full-stack software engineer completing my B.S. in Computer Science at Southern New Hampshire University, with a concentration in AI and Machine Learning and a 3.85 GPA. I'm excited to bring the work I've done in the classroom and on real client projects into a role where I can contribute across the stack from day one.</p>
-        <p>My experience spans the MEAN stack, Java, Python, and mobile and 3D graphics development. Beyond code, years of hands-on hardware and systems troubleshooting give me a deeper understanding of how software actually runs on real machines. I'm looking to grow alongside talented engineers and keep building things that matter.</p>
+        <p>I'm a full-stack software engineer completing my B.S. in Computer Science at Southern New Hampshire University, expected October 2026, with a concentration in AI and Machine Learning and a 3.85 GPA. I'm excited to bring the work I've done in the classroom and on real client projects into a role where I can contribute across the stack from day one.</p>
+        <p>My experience spans the MEAN stack, Java, Python, and mobile and 3D graphics development. Beyond code, 20+ years of hands-on hardware and systems troubleshooting give me a deeper understanding of how software actually runs on real machines. I'm looking to grow alongside talented engineers and keep building things that matter.</p>
       </div>
     </div>
 
     <div class="stats">
       <div><div class="stat-num">3.85</div><div class="stat-label">GPA / Principal's List</div></div>
-      <div><div class="stat-num">7+</div><div class="stat-label">Shipped projects</div></div>
+      <div><div class="stat-num">9+</div><div class="stat-label">Shipped projects</div></div>
       <div><div class="stat-num">100%</div><div class="stat-label">AI agent win rate</div></div>
-      <div><div class="stat-num">6+</div><div class="stat-label">Years hands-on tech</div></div>
+      <div><div class="stat-num">20+</div><div class="stat-label">Years hands-on tech</div></div>
     </div>
   </div>
 </section>
@@ -461,25 +461,45 @@
       <div class="proj">
         <div class="proj-num">01</div>
         <div class="proj-main">
+          <h3>AI Job Finder Agent</h3>
+          <p>An autonomous agent that searches multiple job sites via API, uses an LLM to extract and score postings against a candidate profile, and emails a daily report on an automated schedule.</p>
+          <div class="proj-tags"><span class="tag">Python</span><span class="tag">LLM APIs</span><span class="tag">Groq / OpenAI SDK</span><span class="tag">Tavily</span></div>
+        </div>
+        <a class="proj-link" href="https://github.com/FabianThen/AI-Job-Finder-Agent" target="_blank" rel="noopener">See project</a>
+      </div>
+
+      <div class="proj">
+        <div class="proj-num">02</div>
+        <div class="proj-main">
+          <h3>InterviewCoach — Native macOS App</h3>
+          <p>A native macOS SwiftUI app providing a floating overlay during live interviews, capturing audio in real time and maintaining session history for review.</p>
+          <div class="proj-tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">macOS</span></div>
+        </div>
+        <a class="proj-link" href="https://github.com/FabianThen/InterviewCoach" target="_blank" rel="noopener">See project</a>
+      </div>
+
+      <div class="proj">
+        <div class="proj-num">03</div>
+        <div class="proj-main">
           <h3>Selva Rosa — Restaurant Website</h3>
-          <p>A website for a restaurant based in Florida, currently in progress pending final client input. Focused on clean UI/UX, responsive layout, and a warm, inviting front-end experience for diners.</p>
+          <p>A live website built for Selva Rosa, a Florida-based restaurant, focused on clean UI/UX, responsive layout, and a warm, inviting front-end experience for diners.</p>
           <div class="proj-tags"><span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">HTML / CSS</span></div>
         </div>
         <a class="proj-link" href="https://selva-rosa.netlify.app/#home" target="_blank" rel="noopener">See project</a>
       </div>
 
       <div class="proj">
-        <div class="proj-num">02</div>
+        <div class="proj-num">04</div>
         <div class="proj-main">
           <h3>RealSteal — Luxury E-Commerce Website</h3>
-          <p>A luxury designer clothing e-commerce site being built for a client, drawing design inspiration from Cettire, Farfetch, and Nordstrom. The online store is scheduled to launch by the end of 2026.</p>
+          <p>A live luxury designer clothing e-commerce site built for a client, drawing design inspiration from Cettire, Farfetch, and Nordstrom.</p>
           <div class="proj-tags"><span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">HTML / CSS</span></div>
         </div>
         <a class="proj-link" href="https://fabianthen.github.io/RealSteal_Website/#" target="_blank" rel="noopener">See project</a>
       </div>
 
       <div class="proj">
-        <div class="proj-num">03</div>
+        <div class="proj-num">05</div>
         <div class="proj-main">
           <h3>Travlr Getaways — Full-Stack MEAN App</h3>
           <p>A complete travel-booking platform: an Angular single-page app backed by Express REST APIs and MongoDB via Mongoose, with JWT-secured endpoints and full CRUD tested in Postman.</p>
@@ -489,7 +509,7 @@
       </div>
 
       <div class="proj">
-        <div class="proj-num">04</div>
+        <div class="proj-num">06</div>
         <div class="proj-main">
           <h3>Autonomous Navigation AI Agent</h3>
           <p>A deep Q-learning agent that reached a 100% win rate by epoch 394 in a grid-based pathfinding task, using experience replay and reward shaping to stabilize training.</p>
@@ -499,7 +519,7 @@
       </div>
 
       <div class="proj">
-        <div class="proj-num">05</div>
+        <div class="proj-num">07</div>
         <div class="proj-main">
           <h3>Weight Tracker — Android App</h3>
           <p>A fully functional native Android app with a SQLite backend, complete CRUD, account management, SMS goal notifications, and live accelerometer data via SensorManager.</p>
@@ -509,7 +529,7 @@
       </div>
 
       <div class="proj">
-        <div class="proj-num">06</div>
+        <div class="proj-num">08</div>
         <div class="proj-main">
           <h3>Grazioso Salvare — Data Dashboard</h3>
           <p>An interactive Python dashboard on MongoDB with a reusable CRUD module and dynamic widgets: tables, filters, charts, and a geolocation map for real-time insight.</p>
@@ -519,7 +539,7 @@
       </div>
 
       <div class="proj">
-        <div class="proj-num">07</div>
+        <div class="proj-num">09</div>
         <div class="proj-main">
           <h3>3D Scene Renderer</h3>
           <p>A real-time 3D room scene in OpenGL/C++ with full Phong shading, three light types, multi-texturing, and interactive camera navigation with a perspective/orthographic toggle.</p>
