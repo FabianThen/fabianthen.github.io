@@ -354,6 +354,131 @@
   }
   .skill-block p { color: var(--ink-soft); font-size: 0.95rem; line-height: 1.7; }
 
+  /* CAPSTONE */
+  .capstone-section { background: var(--stone-100); }
+  .capstone-intro { max-width: 760px; margin-top: 1.5rem; }
+  .capstone-intro p { color: var(--ink-soft); font-size: 1.02rem; margin-bottom: 1.1rem; }
+
+  .capstone-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .feature-card {
+    background: #fff;
+    border: 1px solid var(--stone-200);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .feature-card h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.01em;
+  }
+  .feature-card .feature-kicker {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+  }
+  .feature-card p { color: var(--ink-soft); font-size: 0.95rem; margin-bottom: 1.3rem; flex-grow: 1; }
+  .video-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1.3rem;
+    background: var(--ink);
+  }
+  .video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+  .artifact-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 3rem; }
+  .artifact-card {
+    background: #fff;
+    border: 1px solid var(--stone-200);
+    border-radius: 8px;
+    padding: 2rem 2.2rem;
+    border-left: 4px solid var(--accent);
+  }
+  .artifact-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.9rem;
+  }
+  .artifact-head h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .artifact-cat {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(47,111,107,0.1);
+    padding: 4px 11px;
+    border-radius: 3px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .artifact-card > p { color: var(--ink-soft); font-size: 0.97rem; margin-bottom: 1.1rem; }
+  .artifact-card .enh-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .artifact-card ul { list-style: none; margin-bottom: 1.4rem; }
+  .artifact-card ul li {
+    color: var(--ink-soft);
+    font-size: 0.92rem;
+    padding-left: 1.3rem;
+    position: relative;
+    margin-bottom: 0.4rem;
+  }
+  .artifact-card ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .artifact-links { display: flex; flex-direction: row; justify-content: flex-start; gap: 0.7rem; flex-wrap: wrap; align-items: center; }
+  .artifact-links .doc-link { flex: 0 0 auto; display: inline-block; width: auto; }
+  .doc-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.55rem 1.1rem;
+    border-radius: 3px;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .doc-link.primary { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+  .doc-link.primary:hover { background: var(--accent-deep); border-color: var(--accent-deep); }
+  .doc-link.ghost { background: transparent; color: var(--ink-soft); border: 1px solid var(--stone-300); }
+  .doc-link.ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+  @media (max-width: 760px) {
+    .capstone-feature { grid-template-columns: 1fr; }
+  }
+
   /* CONTACT */
   .contact-section { text-align: center; background: var(--stone-100); }
   .contact-section h2.section-title { margin-bottom: 1rem; }
@@ -378,6 +503,8 @@
     nav { padding: 1rem 1.25rem; }
     .nav-links { gap: 1.1rem; }
     .nav-links a.hide-mobile { display: none; }
+    .capstone-feature { grid-template-columns: 1fr; }
+    .artifact-head { flex-direction: column; gap: 0.3rem; }
     .parallax-band { min-height: 40vh; }
     .mission-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     .stats { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
@@ -394,6 +521,7 @@
   <div class="nav-links">
     <a href="#mission">Mission</a>
     <a href="#work">Work</a>
+    <a href="#capstone">Capstone</a>
     <a href="#skills" class="hide-mobile">Skills</a>
     <a href="#contact">Contact</a>
   </div>
@@ -546,6 +674,95 @@
           <div class="proj-tags"><span class="tag">C++</span><span class="tag">OpenGL</span><span class="tag">GLSL</span></div>
         </div>
         <a class="proj-link" href="https://github.com/FabianThen/OpenGL-3D-Scene-Renderer" target="_blank" rel="noopener">See project</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CS-499 CAPSTONE -->
+<section class="capstone-section panel" id="capstone">
+  <div class="wrap">
+    <div class="eyebrow">CS-499 Computer Science Capstone</div>
+    <h2 class="section-title">Capstone ePortfolio</h2>
+    <div class="capstone-intro">
+      <p>This is the culminating project of my B.S. in Computer Science. For it, I selected three artifacts from across the program and enhanced each one in a different core area: software design and engineering, algorithms and data structures, and databases. Every enhancement began with a critical code review, continued through a specific plan, and ended in a tested implementation pushed to a live repository.</p>
+    </div>
+
+    <div class="capstone-feature">
+      <div class="feature-card">
+        <div class="feature-kicker">Start Here</div>
+        <h3>Professional Self-Assessment</h3>
+        <p>A holistic introduction to my strengths across team collaboration, communicating with stakeholders, algorithms and data structures, software engineering and databases, and security, and how the three artifacts fit together as a whole.</p>
+        <a class="doc-link primary" href="docs/Professional_Self_Assessment.pdf" target="_blank" rel="noopener">Read the self-assessment</a>
+      </div>
+      <div class="feature-card">
+        <div class="feature-kicker">Informal Code Review</div>
+        <h3>Code Review Walkthrough</h3>
+        <div class="video-frame">
+          <iframe src="https://www.youtube.com/embed/_N4BIzsBSn4" title="CS-499 Code Review" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p>A recorded walkthrough of the three original artifacts, analyzing each for weaknesses in structure, security, efficiency, and documentation, and laying out the plan for every enhancement that followed.</p>
+      </div>
+    </div>
+
+    <div class="artifact-list">
+
+      <div class="artifact-card">
+        <div class="artifact-head">
+          <h3>Travlr Getaways</h3>
+          <span class="artifact-cat">Software Design &amp; Engineering</span>
+        </div>
+        <p>A full-stack MEAN booking platform (Angular, Express, MongoDB) originally built in CS-465.</p>
+        <div class="enh-label">What was enhanced</div>
+        <ul>
+          <li>Standardized inconsistent async error handling across the Express controllers</li>
+          <li>Added real input validation and a duplicate-account check</li>
+          <li>Corrected incorrect HTTP status codes and added login rate limiting</li>
+        </ul>
+        <div class="artifact-links">
+          <a class="doc-link primary" href="https://github.com/FabianThen/Travlr-Getaways-Full-Stack-Booking-Platform/tree/main/app_api/controllers" target="_blank" rel="noopener">Enhanced code</a>
+          <a class="doc-link ghost" href="https://github.com/FabianThen/Travlr-Getaways-Full-Stack-Booking-Platform/commits/main/app_api/controllers/trips.js" target="_blank" rel="noopener">Original (commit history)</a>
+          <a class="doc-link ghost" href="docs/Software_Design_Engineering_Narrative.pdf" target="_blank" rel="noopener">Read the narrative</a>
+        </div>
+      </div>
+
+      <div class="artifact-card">
+        <div class="artifact-head">
+          <h3>Autonomous Navigation AI Agent</h3>
+          <span class="artifact-cat">Algorithms &amp; Data Structures</span>
+        </div>
+        <p>A deep Q-learning agent that navigates a treasure maze, originally built in CS-370.</p>
+        <div class="enh-label">What was enhanced</div>
+        <ul>
+          <li>Fixed a target-network constructor bug that silently disabled the target network</li>
+          <li>Replaced the O(n) list-based replay buffer with an O(1) deque and vectorized batch prediction</li>
+          <li>Added a tabular Q-learning benchmark to justify the algorithmic design tradeoff with real measurements</li>
+        </ul>
+        <div class="artifact-links">
+          <a class="doc-link primary" href="https://github.com/FabianThen/Autonomous-Navigation-AI-Agent" target="_blank" rel="noopener">Enhanced code</a>
+          <a class="doc-link ghost" href="https://github.com/FabianThen/Autonomous-Navigation-AI-Agent/commits/main/GameExperience.py" target="_blank" rel="noopener">Original (commit history)</a>
+          <a class="doc-link ghost" href="docs/Algorithms_Data_Structures_Narrative.pdf" target="_blank" rel="noopener">Read the narrative</a>
+        </div>
+      </div>
+
+      <div class="artifact-card">
+        <div class="artifact-head">
+          <h3>Grazioso Salvare Dashboard</h3>
+          <span class="artifact-cat">Databases</span>
+        </div>
+        <p>A MongoDB CRUD module behind an animal-shelter dashboard, originally built in CS-340.</p>
+        <div class="enh-label">What was enhanced</div>
+        <ul>
+          <li>Restored a corrupted file to working order and completed the CRUD contract with update and delete</li>
+          <li>URL-encoded database credentials and added connection guards to every operation</li>
+          <li>Added indexing on the fields the dashboard queries most</li>
+        </ul>
+        <div class="artifact-links">
+          <a class="doc-link primary" href="https://github.com/FabianThen/Grazioso-Salvare-Animal-Shelter-Dashboard" target="_blank" rel="noopener">Enhanced code</a>
+          <a class="doc-link ghost" href="https://github.com/FabianThen/Grazioso-Salvare-Animal-Shelter-Dashboard/commits/main/crud_module.py" target="_blank" rel="noopener">Original (commit history)</a>
+          <a class="doc-link ghost" href="docs/Databases_Narrative.pdf" target="_blank" rel="noopener">Read the narrative</a>
+        </div>
       </div>
 
     </div>
